@@ -9,14 +9,14 @@ return {
     -- second key is the lefthand side of the map
 
     -- navigate buffer tabs with `H` and `L`
-    -- L = {
-    --   function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
-    --   desc = "Next buffer",
-    -- },
-    -- H = {
-    --   function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
-    --   desc = "Previous buffer",
-    -- },
+    L = {
+      function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
+      desc = "Next buffer",
+    },
+    H = {
+      function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
+      desc = "Previous buffer",
+    },
 
     -- mappings seen under group name "Buffer"
     ["<leader>bD"] = {
@@ -32,9 +32,39 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["sv"] = { "<cmd>vertical split<cr>", desc = "Vertical split" },
+    ["ss"] = { "<cmd>horizontal split<cr>", desc = "Horizontal split" },
+    [".."] = { "$", desc = "" },
+    [",,"] = { "0", desc = "" },
+
+    -- delete
+    ["dd"] = { '"_dd', desc = "" },
+    ["diw"] = { '"_diw', desc = "" },
+
+    -- terminal
+    ["<C-i>"] = { "<cmd>ToggleTerm direction=float<CR>", desc = "ToggleTerm float" },
+
+    -- hop
+    ["e"] = { ":HopChar2<CR>", desc = "" },
+    ["<C-a>"] = { ":HopWord<CR>", desc = "" },
+    ["<C-n>"] = { ":HopLine<CR>", desc = "" },
+    ["<C-p>"] = { ":HopPattern<CR>", desc = "" },
+
+    -- Neogit 
+    ["<leader>ng"] = { ":Neogit<CR>", desc = "Neogit, git add, commit, log..." }
   },
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
+    ["<C-i>"] = { "<cmd>ToggleTerm direction=float<cr>", desc = "ToggleTerm float" },
+  },
+  i = {
+    -- ["<C-g>"] = { 'copilot#Accept("<CR>")', silent = true, expr = true, replace_keycodes = false },
+    -- ["<C-]>"] = { 'copilot#Next()', silent = true, expr = true },
+    -- ["<C-[>"] = { 'copilot#Previous()', silent = true, expr = true },
+    -- ["<C-o>"] = { 'copilot#Dismiss()', silent = true, expr = true },
+  },
+  v = {
+    ["d"] = { '"_d', desc = "" },
   },
 }
