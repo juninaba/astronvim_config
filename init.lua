@@ -50,7 +50,30 @@ return {
     },
     -- enable servers that you already have installed without mason
     servers = {
+      "dartls"
       -- "pyright"
+    },
+    config = {
+      dartls = function ()
+        return {
+          cmd = { "dart", "language-server", "--protocol=lsp" };
+          filetypes = { "dart" };
+          init_options = {
+            closingLabels = true,
+            flutterOutline = true,
+            onlyAnalyzeProjectsWithOpenFiles = true,
+            outline = true,
+            suggestFromUnimportedLibraries = true
+          };
+          root_dir = require("lspconfig.util").root_pattern("pubspec.yaml");
+          settings = {
+            dart = {
+              completeFunctionCalls = true,
+              showTodos = true
+            }
+          };
+        }
+      end,
     },
   },
 
