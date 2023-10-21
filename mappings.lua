@@ -51,7 +51,12 @@ return {
     ["<C-p>"] = { ":HopPattern<CR>", desc = "" },
 
     -- Neogit 
-    ["<leader>ng"] = { ":Neogit<CR>", desc = "Neogit, git add, commit, log..." }
+    ["<leader>ng"] = { ":Neogit<CR>", desc = "Neogit, git add, commit, log..." },
+
+    -- number
+    ["<leader>N"] = { name = "Number" },
+    ["<leader>Ns"] = {  ":set number<CR>", desc = "show number"  },
+    ["<leader>Nh"] = {  ":set nonumber<CR>", desc = "hide number"  },
   },
   t = {
     -- setting a mapping to false will disable it
