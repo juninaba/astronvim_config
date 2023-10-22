@@ -64,6 +64,7 @@ return {
     ["<C-i>"] = { "<cmd>ToggleTerm direction=float<cr>", desc = "ToggleTerm float" },
   },
   i = {
+    -- copilot
     -- ["<C-g>"] = { 'copilot#Accept("<CR>")', silent = true, expr = true, replace_keycodes = false },
     -- ["<C-]>"] = { 'copilot#Next()', silent = true, expr = true },
     -- ["<C-[>"] = { 'copilot#Previous()', silent = true, expr = true },
