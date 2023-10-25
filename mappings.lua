@@ -61,6 +61,8 @@ return {
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
+
+    -- terminal
     ["<C-i>"] = { "<cmd>ToggleTerm direction=float<cr>", desc = "ToggleTerm float" },
   },
   i = {
