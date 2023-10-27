@@ -42,7 +42,7 @@ return {
     ["diw"] = { '"_diw', desc = "" },
 
     -- terminal
-    ["<C-i>"] = { "<cmd>ToggleTerm direction=float<CR>", desc = "ToggleTerm float" },
+    ["<TAB>i"] = { "<cmd>ToggleTerm direction=float<CR>", desc = "ToggleTerm float" },
 
     -- hop
     ["e"] = { ":HopChar2<CR>", desc = "" },
@@ -63,7 +63,7 @@ return {
     -- ["<esc>"] = false,
 
     -- terminal
-    ["<C-i>"] = { "<cmd>ToggleTerm direction=float<cr>", desc = "ToggleTerm float" },
+    ["<TAB>i"] = { "<cmd>ToggleTerm direction=float<cr>", desc = "ToggleTerm float" },
   },
   i = {
     -- copilot
