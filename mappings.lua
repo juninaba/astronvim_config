@@ -40,6 +40,8 @@ return {
     -- delete
     ["dd"] = { '"_dd', desc = "" },
     ["diw"] = { '"_diw', desc = "" },
+    ["di'"] = { "_di'", desc = "" },
+    ['di"'] = { '"_di"', desc = "" },
 
     -- terminal
     ["<TAB>i"] = { "<cmd>ToggleTerm direction=float<CR>", desc = "ToggleTerm float" },
