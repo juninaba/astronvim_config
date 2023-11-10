@@ -40,6 +40,7 @@ return {
           -- "go",
           "dart",
           "sql",
+          "typescriptreact",
         },
       },
       disabled = { -- disable formatting capabilities for the listed language servers
