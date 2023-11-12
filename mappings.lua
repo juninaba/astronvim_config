@@ -46,7 +46,7 @@ return {
     -- terminal
     ["<M-f>"] = { "<cmd>ToggleTerm direction=float<CR>", desc = "ToggleTerm float" },
     ["<M-v>"] = { "<cmd>ToggleTerm size=80 direction=vertical<CR>", desc = "ToggleTerm vertical" },
-    ["<M-h>"] = { "<cmd>ToggleTerm size=20 direction=horizontal<CR>", desc = "ToggleTerm vertical" },
+    ["<M-h>"] = { "<cmd>ToggleTerm size=20 direction=horizontal<CR>", desc = "ToggleTerm horizontal" },
 
     -- hop
     ["e"] = { ":HopChar2<CR>", desc = "" },
@@ -69,7 +69,7 @@ return {
     -- terminal
     ["<M-f>"] = { "<cmd>ToggleTerm direction=float<CR>", desc = "ToggleTerm float" },
     ["<M-v>"] = { "<cmd>ToggleTerm size=80 direction=vertical<CR>", desc = "ToggleTerm vertical" },
-    ["<M-h>"] = { "<cmd>ToggleTerm size=20 direction=horizontal<CR>", desc = "ToggleTerm vertical" },
+    ["<M-h>"] = { "<cmd>ToggleTerm size=20 direction=horizontal<CR>", desc = "ToggleTerm horizontal" },
   },
   i = {
     -- copilot
