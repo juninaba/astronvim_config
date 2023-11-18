@@ -61,6 +61,7 @@ return {
     ["<leader>N"] = { name = "Number" },
     ["<leader>Ns"] = {  ":set number<CR>", desc = "show number"  },
     ["<leader>Nh"] = {  ":set nonumber<CR>", desc = "hide number"  },
+    ["<C-f>"] = { "<cmd>Telescope find_files<CR>", desc = "" },
   },
   t = {
     -- setting a mapping to false will disable it
