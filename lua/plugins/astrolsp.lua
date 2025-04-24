@@ -45,6 +45,14 @@ return {
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
+      -- pyright = {
+      --   settings = {
+      --     python = {
+      --       pythonPath = ".venv/bin/python",
+      --       venv = "env",
+      --     }
+      --   }
+      -- }
     },
     -- customize how language servers are attached
     handlers = {
