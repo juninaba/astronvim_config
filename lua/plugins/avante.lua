@@ -6,6 +6,7 @@ return {
   {
     "yetone/avante.nvim",
     event = "VeryLazy",
+    lazy = false,
     version = false, -- Never set this value to "*"! Never!
     opts = {
       provider = "copilot",
@@ -44,6 +45,7 @@ return {
           max_tokens = tokens(256),
         },
       },
+      ag_service = { enabled = false },
       behaviour = {
         use_cwd_as_project_root = true,
         -- auto_apply_diff_after_generation = true,
