@@ -50,6 +50,10 @@ return {
         use_cwd_as_project_root = true,
         -- auto_apply_diff_after_generation = true,
       },
+      windows = {
+        ---@type "right" | "left" | "top" | "bottom"
+        position = "left",
+      },
     },
     -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
     build = "make",
