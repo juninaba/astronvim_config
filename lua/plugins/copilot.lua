@@ -2,13 +2,17 @@ return {
   {
     "github/copilot.vim",
     lazy = false,
-    opts = {
-      suggestion = {
-        auto_trigger = true,
-        accept = "false",
-      },
-    },
+    opts = {},
     config = function()
+      vim.g.copilot_no_tab_map = true
+
+      local keymap = vim.keymap.set
+      keymap(
+        "i",
+        "<C-g>",
+        'copilot#Accept("<CR>")',
+        { silent = true, expr = true, script = true, replace_keycodes = false }
+      )
     end
   },
 }
