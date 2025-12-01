@@ -3,62 +3,64 @@ return {
   opts = function(_, opts)
     local status = require("astroui.status")
 
-    vim.opt.laststatus = 0 -- 非表示
+    vim.opt.laststatus = 0
 
-    opts.statusline = { -- statusline
-      hl = { fg = "fg", bg = "bg" },
-      status.component.mode(),
-      status.component.git_branch(),
-      status.component.file_info(),
+    opts.statusline = nil
+    -- opts.statusline = { -- statusline
+    --   hl = { fg = "fg", bg = "bg" },
+    --   status.component.mode(),
+    --   status.component.git_branch(),
+    --   status.component.file_info(),
+    --
+    --   status.component.separated_path({
+    --     -- CWD 相対で出したい場合（絶対なら ":p"）
+    --     path_func = status.provider.filename({ modify = ":." }),
+    --     padding   = { right = 1 },        -- 右に 1 マス空ける
+    --     surround  = { separator = "none" }-- 左側セパレータを消す
+    --   }),
+    --
+    --   status.component.git_diff(),
+    --   status.component.diagnostics(),
+    --   status.component.fill(),
+    --   status.component.cmd_info(),
+    --   status.component.fill(),
+    --   status.component.lsp(),
+    --   status.component.virtual_env(),
+    --   status.component.treesitter(),
+    --   status.component.nav(),
+    --   status.component.mode({ surround = { separator = "right" } }),
+    -- }
 
-      status.component.separated_path({
-        -- CWD 相対で出したい場合（絶対なら ":p"）
-        path_func = status.provider.filename({ modify = ":." }),
-        padding   = { right = 1 },        -- 右に 1 マス空ける
-        surround  = { separator = "none" }-- 左側セパレータを消す
-      }),
-
-      status.component.git_diff(),
-      status.component.diagnostics(),
-      status.component.fill(),
-      status.component.cmd_info(),
-      status.component.fill(),
-      status.component.lsp(),
-      status.component.virtual_env(),
-      status.component.treesitter(),
-      status.component.nav(),
-      status.component.mode({ surround = { separator = "right" } }),
-    }
-
-    opts.winbar = { -- winbar
-      init = function(self)
-        self.bufnr = vim.api.nvim_get_current_buf()
-      end,
-      fallthrough = false,
-      { -- inactive winbar
-        condition = function()
-          return not status.condition.is_active()
-        end,
-        status.component.separated_path(),
-        status.component.file_info({
-          file_icon = {
-            hl = status.hl.file_icon("winbar"),
-            padding = { left = 0 },
-          },
-          filename = {},
-          filetype = false,
-          file_read_only = false,
-          hl = status.hl.get_attributes("winbarnc", true),
-          surround = false,
-          update = "BufEnter",
-        }),
-      },
-      { -- active winbar
-        status.component.breadcrumbs({
-          hl = status.hl.get_attributes("winbar", true),
-        }),
-      },
-    }
+    opts.winbar = nil
+    -- opts.winbar = { -- winbar
+    --   init = function(self)
+    --     self.bufnr = vim.api.nvim_get_current_buf()
+    --   end,
+    --   fallthrough = false,
+    --   { -- inactive winbar
+    --     condition = function()
+    --       return not status.condition.is_active()
+    --     end,
+    --     status.component.separated_path(),
+    --     status.component.file_info({
+    --       file_icon = {
+    --         hl = status.hl.file_icon("winbar"),
+    --         padding = { left = 0 },
+    --       },
+    --       filename = {},
+    --       filetype = false,
+    --       file_read_only = false,
+    --       hl = status.hl.get_attributes("winbarnc", true),
+    --       surround = false,
+    --       update = "BufEnter",
+    --     }),
+    --   },
+    --   { -- active winbar
+    --     status.component.breadcrumbs({
+    --       hl = status.hl.get_attributes("winbar", true),
+    --     }),
+    --   },
+    -- }
 
     opts.tabline = { -- tabline
       { -- file tree padding
