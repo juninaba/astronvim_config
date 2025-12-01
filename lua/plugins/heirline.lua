@@ -3,6 +3,8 @@ return {
   opts = function(_, opts)
     local status = require("astroui.status")
 
+    vim.opt.laststatus = 0 -- 非表示
+
     opts.statusline = { -- statusline
       hl = { fg = "fg", bg = "bg" },
       status.component.mode(),
