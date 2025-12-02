@@ -3,6 +3,15 @@ return {
     "AstroNvim/astrocore",
     ---@type AstroCoreOpts
     opts = {
+      options = {
+        opt = {
+          number = false,
+          relativenumber = false,
+          wrap = true,
+          linebreak = true,
+          breakindent = true,
+        },
+      },
       mappings = {
         n = {
           ["<C-a>"] = { "^", desc = "" },
